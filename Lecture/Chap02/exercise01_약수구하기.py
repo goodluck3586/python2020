@@ -1,20 +1,12 @@
-# <연습문제 1>
-# 양의 정수를 입력받아 약수를 출력하시오.
+# <연습문제 1> 양의 정수를 입력받아 약수를 출력하시오.
 
-#include <stdio.h>
-int main() {
-    int num, i;
-    printf("Enter a positive integer: ");
-    scanf("%d", &num);
-    printf("Factors of %d are: ", num);
-    for (i = 1; i <= num; ++i) {
-        if (num % i == 0) {
-            printf("%d ", i);
-        }
-    }
-    return 0;
-}
+#region 1. 숫자 입력받아 변수에 저장하기
+input_num = int(input("Enter a positive integer: "))
+print(f'Factors of {input_num}')
+#endregion
 
-Output
-Enter a positive integer: 60
-Factors of 60 are: 1 2 3 4 5 6 10 12 15 20 30 60
+#region 2. 반복문으로 약수 출력하기
+for i in range(1, input_num+1):
+    if input_num % i == 0:
+        print(i, end=' ')
+#endregion
