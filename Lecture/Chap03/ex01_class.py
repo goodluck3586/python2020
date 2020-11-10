@@ -1,23 +1,9 @@
 #region 매개 변수가 없는 생성자
-class Calculator1:
-    # 생성자: 클래스 객체를 생성하는 함수
-    def __init__(self):
-        self.result = 0
+# class Calculator1:
+#     # 생성자: 클래스 객체를 생성하는 함수
+#     def __init__(self):
+#         self.result = 0
     
-<<<<<<< HEAD
-    def add(self, num):
-        self.result += num
-        return self.result
-
-# 객체 생성
-calc1 = Calculator1()
-calc2 = Calculator1()
-
-print(calc1.add(1))  # 1
-print(calc1.add(2))  # 3
-print(calc2.add(3))  # 3
-print(calc2.add(4))  # 7
-=======
 #     def add(self, num):
 #         self.result += num
 #         return self.result
@@ -31,7 +17,6 @@ print(calc2.add(4))  # 7
 # print(calc1.add(2))  # 3
 # print(calc2.add(3))  # 3
 # print(calc2.add(4))  # 7
->>>>>>> e96fb95b6339a1eedc7b53b26375d13294a65269
 #endregion
 
 #region 매개 변수가 있는 생성자를 가진 클래스

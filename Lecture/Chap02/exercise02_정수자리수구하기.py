@@ -1,23 +1,14 @@
-# 사용자로부터 정수를 입력받아 자릿수를 출력하시오.
+# <연습 문제2> 사용자로부터 자연수를 입력받아 자릿수를 출력하시오.
 
-#include <stdio.h>
-int main() {
-    long long n;
-    int count = 0;
-    printf("Enter an integer: ");
-    scanf("%lld", &n);
- 
-    // iterate until n becomes 0
-    // remove last digit from n in each iteration
-    // increase count by 1 in each iteration
-    while (n != 0) {
-        n /= 10;     // n = n/10
-        ++count;
-    }
+input_num = int(input('Enter an integer:'))
 
-    printf("Number of digits: %d", count);
-}
+digits = 0
+#region 자릿수 구하기
+while input_num != 0:
+    input_num = int(input_num / 10)
+    digits = digits + 1
 
-<Output>
-Enter an integer: 3452
-Number of digits: 4
+print(f'Number of digits: {digits}')
+#endregion
+
+
