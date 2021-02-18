@@ -11,11 +11,10 @@ print(f'현재 시간: {time.strftime("%H:%M:%S")}')
 alarm_time = input("알람 시간: ")                  # 알람 시간을 '시:분:초' 형식으로 입력받느다.
 
 alarm_hms = alarm_time.split(':')
-if len(alarm_hms) == 3 and 0<=int(alarm_hms[0] \
-    and 0<=int(alarm_hms[1]) and 0<=int(alarm_hms[2])):
+# 시:분:초가 모두 존재하고, 마이너스 값이 없으면
+if len(alarm_hms) == 3 and 0 <= int(alarm_hms[0] and 0 <= int(alarm_hms[1]) and 0 <= int(alarm_hms[2])):
     # 알람 시간만큼 대기한 후 알람 소리 재생
-    time.sleep(int(alarm_hms[0])*60*60 \
-        + int(alarm_hms[1])*60 + int(alarm_hms[2]))
+    time.sleep(int(alarm_hms[0])*60*60 + int(alarm_hms[1])*60 + int(alarm_hms[2]))
     for i in range(1, 10):
         winsound.Beep(i*100, 200)
         
